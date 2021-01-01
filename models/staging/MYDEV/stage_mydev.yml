@@ -1,0 +1,29 @@
+            
+version: 2
+
+models:
+
+    - name: cte1
+      description: My First CTE1 .This get displayed in description
+       
+      columns:
+        - name: empno
+          description: My First CTE1 .This get displayed in description
+          
+          
+          tests:
+            - unique
+            - not_null
+    - name: cte2
+      description: My Second CTE2 .This get displayed in description
+       
+      columns:
+        - name: DNAME
+          description: "{{doc('deptnames')}}"
+          tests:
+            - accepted_values:
+                values:
+                 - ACCOUNTING
+                 - SALES
+                 - RESEARCH
+             
